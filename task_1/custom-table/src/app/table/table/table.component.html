@@ -1,0 +1,6 @@
+<ng-container *ngIf="items.length">
+  <app-table-row [header]="true" [fontSize]="fontSize | toPixel: 1.2" [items]="items[0]"/>
+  <app-table-row [items]="row" [fontSize]="fontSize | toPixel" [bgColor]="zebra && i % 2 == 1 ? zebraColor : standardColor"
+                 *ngFor="let row of items.slice(1); let i = index"/>
+</ng-container>
+

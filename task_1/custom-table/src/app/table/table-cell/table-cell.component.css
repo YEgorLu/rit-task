@@ -1,0 +1,22 @@
+:host {
+  display: table-cell;
+  background-color: inherit;
+
+  padding: .5vh .5vw;
+
+  border: 1px solid black;
+  transition: all .2s ease-out;
+}
+
+:host(.header){
+  font-weight: bold;
+}
+
+:host(:hover) {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+:host(:active) {
+  transition: all .1s;
+  transform: scale3d(1.15, 1.15, 1.15);
+}

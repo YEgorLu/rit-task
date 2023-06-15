@@ -1,0 +1,57 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5vh;
+}
+
+.table-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  height: 20vh;
+  margin-inline: auto;
+
+  background-color: ghostwhite;
+  border-radius: 20px;
+
+  padding: 10px;
+}
+
+.table-form-title {
+  text-align: center;
+}
+
+.table-form-input {
+  width: 40px;
+  border-radius: 7px;
+  border-width: .1px;
+  text-align: center;
+}
+
+.table-form-input:focus-visible{
+  outline: none;
+}
+
+.output-container {
+  background-color: ghostwhite;
+  position: fixed;
+  top: 1vh;
+  left: 1vw;
+
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.table-form-button:active {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: inherit;
+}
