@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 90svh;
+  justify-content: center;
+}
+
+.persons-list {
+  height: 100%;
+  padding: 0;
+}
+
+.parsons-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.persons-list-container {
+  overflow-y: scroll;
+}
+
+@media (max-width: 599.98px) {
+  .persons {
+    overflow-y: visible;
+
+    /*#{&}-list {
+      height: 100%;
+    }*/
+  }
+}
