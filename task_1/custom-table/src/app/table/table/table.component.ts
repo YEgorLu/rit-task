@@ -1,4 +1,4 @@
-import {Component, HostBinding, Input} from '@angular/core';
+import {Component, Input, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-table',
