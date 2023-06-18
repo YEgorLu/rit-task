@@ -1,0 +1,46 @@
+<app-loader [loading]="planetLoading" [fullscreen]="true"/>
+
+<div class="container">
+  <mat-grid-list gutterSize="100px" *ngIf="planet" [cols]="2 - +isMobile">
+    <mat-grid-tile colspan="1">
+      <mat-list cols="1" aria-colspan="1">
+        <h1>{{planet.name}}</h1>
+        <p>Численность населения: {{planet.population}}</p>
+        <p>Дней в году: {{planet.orbital_period}}</p>
+        <p>Часов в дне: {{planet.diameter}}</p>
+        <p>Диаметр: {{planet.diameter}}</p>
+        <p>Местность: {{planet.terrain}}</p>
+        <p>Климат: {{planet.climate}}</p>
+        <p>% воды по отношению к суше: {{planet.surface_water}}</p>
+        <p>Гравитация составляет {{planet.gravity}} земной</p>
+      </mat-list>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" class="persons">
+      <div class="parsons-inner">
+        <mat-form-field>
+          <mat-label>
+            Пол
+          </mat-label>
+          <mat-select (valueChange)="filterPersons($event)" title="Пол">
+            <mat-option [value]="'male'">Мужской</mat-option>
+            <mat-option [value]="'female'">Женский</mat-option>
+            <mat-option [value]="">Не важен</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="persons-list-container">
+          <mat-list class="persons-list">
+            <mat-list-item *ngIf="personsLoading">
+              <app-loader [loading]="personsLoading"/>
+            </mat-list-item>
+            <mat-list-item *ngFor="let person of filteredPersons">
+              <button mat-button (click)="openDialog(person)">{{person.name}}</button>
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+

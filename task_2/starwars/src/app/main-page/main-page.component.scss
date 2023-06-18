@@ -1,0 +1,30 @@
+@use "@angular/material" as mat;
+
+$input-hover-color: #575757;
+$input-active-color: #787474;
+
+.planet-card {
+  padding: 10px;
+  cursor: pointer;
+
+  #{&}-title {
+    margin: 0;
+  }
+
+  &:hover {
+    background-color: $input-hover-color;
+  }
+
+  &:active {
+    background-color: $input-active-color;
+  }
+}
+
+.search {
+  display: block;
+  margin-inline: auto;
+}
+
+.loader {
+  height: 100px;
+}
